@@ -1,4 +1,4 @@
-﻿#if INCLUDE_ARKIT_FACE_PLUGIN && INCLUDE_AR_FOUNDATION
+﻿#if INCLUDE_ARKIT_FACE_PLUGIN && INCLUDE_AR_FOUNDATION && UNITY_IPHONE
 #define FACETRACKING
 #endif
 
@@ -7,7 +7,9 @@ using System.Net.Sockets;
 using System.Threading;
 using Unity.Collections;
 using UnityEngine;
+#if UNITY_IPHONE
 using UnityEngine.XR.ARKit;
+#endif
 
 #if FACETRACKING
 using System.Linq;
